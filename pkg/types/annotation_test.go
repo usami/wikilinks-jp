@@ -11,7 +11,7 @@ import (
 func TestAnnotation(t *testing.T) {
 	var a Annotation
 
-	f, err := ioutil.ReadFile("../testdata/annotation_sample.json")
+	f, err := ioutil.ReadFile("../../testdata/annotation_sample.json")
 	assert.NilError(t, err)
 
 	assert.NilError(t, json.Unmarshal([]byte(f), &a))
