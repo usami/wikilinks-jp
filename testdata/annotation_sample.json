@@ -1,0 +1,28 @@
+{
+    "ENE": "1.6.5.3",
+    "attribute": "別名",
+    "html_offset": {
+        "end": {
+            "line_id": 63,
+            "offset": 72
+        },
+        "start": {
+            "line_id": 63,
+            "offset": 39
+        },
+        "text": "Santo-Pekoa International Airport"
+    },
+    "page_id": "1017261",
+    "text_offset": {
+        "end": {
+            "line_id": 63,
+            "offset": 59
+        },
+        "start": {
+            "line_id": 63,
+            "offset": 26
+        },
+        "text": "Santo-Pekoa International Airport"
+    },
+    "title": "サントペコア国際空港"
+}
