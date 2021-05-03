@@ -13,9 +13,7 @@ type Annotation struct {
 	TextOffset    OffsetPair    `json:"text_offset"`
 	PageID        json.Number   `json:"page_id"`
 	Title         string        `json:"title"`
-	// HasLink       bool          `json:"has_link"`
-	HasLink   bool   `json:"-"`
-	LinkTitle string `json:"link_title"`
+	LinkPageID    json.Number   `json:"link_page_id"`
 }
 
 type OffsetPair struct {

@@ -20,7 +20,7 @@ func TestAnnotation(t *testing.T) {
 	assert.Equal(t, a.AttributeName, AttributeName("別名"))
 	assert.Equal(t, a.PageID, json.Number("1017261"))
 	assert.Equal(t, a.Title, "サントペコア国際空港")
-	assert.Equal(t, a.HasLink, false)
+	assert.Equal(t, string(a.LinkPageID), "")
 
 	ho := a.HTMLOffset
 	assert.Equal(t, ho.Text, "Santo-Pekoa International Airport")
