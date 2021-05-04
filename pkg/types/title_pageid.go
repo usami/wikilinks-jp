@@ -14,8 +14,8 @@ type TitlePageIDWithRedirect struct {
 }
 
 func (t *TitlePageIDWithRedirect) Resolve() json.Number {
-    if t.IsRedirect {
-        return t.RedirectTo.PageID
-    }
-    return t.PageID
+	if t.IsRedirect {
+		return t.RedirectTo.PageID
+	}
+	return t.PageID
 }
