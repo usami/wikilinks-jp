@@ -46,6 +46,7 @@ link-sample() {
 
   [ ! -d "${sample_dir}" ] && download-sample
   [ ! -f "bin/linker" ] && build
+  [ ! -f "${title_pageid_json}" ] && gunzip ${title_pageid_json}.gz
 
   mkdir -p $output_dir
 
