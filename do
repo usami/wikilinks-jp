@@ -36,6 +36,7 @@ build() {
   go build
 
   mv linker $root/bin
+  cd $root
 }
 
 help_link_sample="Run Wikilinks-jp linker for sample data."
@@ -45,9 +46,11 @@ link-sample() {
   local title_pageid_json=data/jawiki-20190120-title2pageid.json
 
   [ ! -d "${sample_dir}" ] && download-sample
-  [ ! -f "bin/linker" ] && build
   [ ! -f "${title_pageid_json}" ] && gunzip ${title_pageid_json}.gz
 
+  build
+
+  rm -rf $output_dir
   mkdir -p $output_dir
 
   for cat in airport city company compound person

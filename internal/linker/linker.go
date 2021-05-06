@@ -19,7 +19,7 @@ import (
 type Linker struct {
 	Category      string
 	Annotations   []*types.Annotation
-	Pages         map[json.Number]*types.Page
+	Pages         map[string]*types.Page
 	TitleToPageID map[string]json.Number
 }
 
@@ -27,7 +27,7 @@ func NewLinker(c string) *Linker {
 	return &Linker{
 		Category:      c,
 		Annotations:   make([]*types.Annotation, 0),
-		Pages:         make(map[json.Number]*types.Page),
+		Pages:         make(map[string]*types.Page),
 		TitleToPageID: make(map[string]json.Number),
 	}
 }
@@ -98,7 +98,7 @@ func (l *Linker) loadAnnotations(filepath string) {
 func (l *Linker) loadPages(dirpath string) {
 	files := listHTMLFiles(dirpath)
 
-	amap := make(map[json.Number][]int)
+	amap := make(map[string][]int)
 
 	for _, an := range l.Annotations {
 		lines := amap[an.PageID]
@@ -155,7 +155,7 @@ func (l *Linker) checkLinks() {
 							if matchesAnnotation(n.FirstChild, an, offset) {
 								title := extractTitle(attr.Val)
 								if pageID, ok := l.TitleToPageID[title]; ok {
-									an.LinkPageID = pageID
+									an.LinkPageID = string(pageID)
 								}
 								break
 							}

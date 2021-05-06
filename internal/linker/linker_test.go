@@ -35,8 +35,8 @@ func TestLinker_loadPages(t *testing.T) {
 	l.loadPages("../../testdata")
 	assert.Equal(t, len(l.Pages), 2)
 
-	p := l.Pages[json.Number("1017261")]
-	assert.Equal(t, p.PageID, json.Number("1017261"))
+	p := l.Pages["1017261"]
+	assert.Equal(t, p.PageID, "1017261")
 	assert.Equal(t, len(p.Lines), 6)
 }
 
@@ -53,7 +53,7 @@ func TestLinker_checkLinks(t *testing.T) {
 
 	t.Run("one annotation", func(t *testing.T) {
 		an := types.Annotation{
-			PageID: json.Number("1017261"),
+			PageID: "1017261",
 			TextOffset: types.OffsetPair{
 				Start: types.Offset{
 					LineID: 63,
@@ -79,7 +79,7 @@ func TestLinker_checkLinks(t *testing.T) {
 
 		l.checkLinks()
 
-		assert.Equal(t, string(l.Annotations[0].LinkPageID), "10")
+		assert.Equal(t, l.Annotations[0].LinkPageID, "10")
 	})
 
 	t.Run("more annotations", func(t *testing.T) {
@@ -103,7 +103,7 @@ func TestLinker_checkLinks(t *testing.T) {
 			"1000",
 		}
 		for i, an := range l.Annotations {
-			assert.Check(t, string(an.LinkPageID) == expected[i], an.LinkPageID)
+			assert.Check(t, an.LinkPageID == expected[i], an.LinkPageID)
 		}
 	})
 }

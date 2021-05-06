@@ -1,7 +1,5 @@
 package types
 
-import "encoding/json"
-
 type ENETag string
 
 type AttributeName string
@@ -11,9 +9,9 @@ type Annotation struct {
 	AttributeName AttributeName `json:"attribute"`
 	HTMLOffset    OffsetPair    `json:"html_offset"`
 	TextOffset    OffsetPair    `json:"text_offset"`
-	PageID        json.Number   `json:"page_id"`
+	PageID        string        `json:"page_id"`
 	Title         string        `json:"title"`
-	LinkPageID    json.Number   `json:"link_page_id"`
+	LinkPageID    string        `json:"link_page_id"`
 }
 
 type OffsetPair struct {

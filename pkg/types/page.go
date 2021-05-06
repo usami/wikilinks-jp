@@ -1,7 +1,6 @@
 package types
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"log"
 	"path/filepath"
@@ -9,17 +8,17 @@ import (
 )
 
 type Page struct {
-	PageID json.Number
+	PageID string
 	Lines  map[int]string
 }
 
-func ParsePageID(s string) json.Number {
+func ParsePageID(s string) string {
 	base := filepath.Base(s)
 	fe := strings.Split(base, ".")
-	return json.Number(fe[0])
+	return fe[0]
 }
 
-func LoadPageFromHTML(filepath string, p json.Number, lineIDs []int) *Page {
+func LoadPageFromHTML(filepath, p string, lineIDs []int) *Page {
 	raw, err := ioutil.ReadFile(filepath)
 	if err != nil {
 		log.Fatal(err)
