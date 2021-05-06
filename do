@@ -46,7 +46,7 @@ link-sample() {
   local title_pageid_json=data/jawiki-20190120-title2pageid.json
 
   [ ! -d "${sample_dir}" ] && download-sample
-  [ ! -f "${title_pageid_json}" ] && gunzip ${title_pageid_json}.gz
+  [ ! -f "${title_pageid_json}" ] && gunzip --keep ${title_pageid_json}.gz
 
   build
 
