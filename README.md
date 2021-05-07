@@ -1,8 +1,8 @@
 # Wikilinks JP
 
-Article link based Wikification linker for [SHINRA2021-LinkJP Task](http://shinra-project.info/shinra2021linkjp/).
+Wikilinks - a Wikification linker for [SHINRA2021-LinkJP Task](http://shinra-project.info/shinra2021linkjp/).
 
-This uses a simple, existing link based approach for linking.
+Wikilinks uses a simple, article link-based approach.
 
 [![usami](https://circleci.com/gh/usami/wikilinks-jp.svg?style=svg)](https://app.circleci.com/pipelines/github/usami/wikilinks-jp)
 
