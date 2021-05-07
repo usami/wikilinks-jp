@@ -13,9 +13,10 @@ Clone this repository first.
 $ git clone https://github.com/usami/wikilinks-jp.git
 ```
 
-Then run `./do link-sample` downloads the sample data, builds the linker and run the linker against the sample data.
+Then running `./do link-sample` downloads the sample data, builds the linker and runs the linker against the sample data.
 
 ```
+$ cd wikilinks-jp
 $ ./do link-sample
 ...
 2021/05/07 10:47:02 linker[airport]: load annotaions
