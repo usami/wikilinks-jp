@@ -43,3 +43,18 @@ The linker can be used as a CLI tool.
 ```
 Usage: ./bin/linker [category] [annotation-file] [html-dir] [title-pageid-file] [output-file]
 ```
+
+## Requirements
+
+### Softwares
+
+The linker and `do` script assumes the following commands are installed:
+
+- go (1.16)
+- curl
+- unzip
+- gunzip
+
+### Files
+
+The linker requires Wikipedia title to pageid mapping file. A mapping file is bandled with this repo (`data/jawiki-20190120-title2pageid.json.gz`). It was downloaded from [here](https://drive.google.com/drive/folders/1ncZnWgDPFuoKQyqAVIaDnnx85sjsW5cN?usp=sharing), and you can donwload the lates version there.
