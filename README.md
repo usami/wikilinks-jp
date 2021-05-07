@@ -1,6 +1,6 @@
 # Wikilinks JP
 
-Wikilinks - a Wikification linker for [SHINRA2021-LinkJP Task](http://shinra-project.info/shinra2021linkjp/).
+Wikilinks ― a Wikification linker for [SHINRA2021-LinkJP Task](http://shinra-project.info/shinra2021linkjp/).
 
 Wikilinks uses a simple, article link-based approach.
 
