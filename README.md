@@ -57,4 +57,4 @@ The linker and `do` script assumes the following commands are installed:
 
 ### Files
 
-The linker requires Wikipedia title to pageid mapping file. A mapping file is bandled with this repo (`data/jawiki-20190120-title2pageid.json.gz`). It was downloaded from [here](https://drive.google.com/drive/folders/1ncZnWgDPFuoKQyqAVIaDnnx85sjsW5cN?usp=sharing), and you can donwload the lates version there.
+The linker requires Wikipedia title to pageid mapping file. A mapping file is bandled with this repo (`data/jawiki-20190120-title2pageid.json.gz`). You can download the latest version [here](https://drive.google.com/drive/folders/1ncZnWgDPFuoKQyqAVIaDnnx85sjsW5cN?usp=sharing).
