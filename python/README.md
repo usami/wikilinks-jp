@@ -12,13 +12,14 @@ $ git clone https://github.com/usami/wikilinks-jp.git
 Create a virtual environment with pipenv and install the necessary libraries.
 
 ```
-$ cd wikilinks-jp/python
+$ cd wikilinks-jp/
 $ pipenv install --dev (or pipenv sync --dev)
 ```
 
 Then running `./do_python.sh link-sample` downloads the sample data, builds the linker and runs the linker against the sample data.
 
 ```
+$ cd python/
 $ ./do_python.sh link-sample
 ```
 
