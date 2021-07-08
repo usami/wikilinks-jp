@@ -16,6 +16,11 @@ download-sample() {
   unzip ${out} -d data/
 }
 
+help_test="Run all tests."
+test() {
+  pytest -v tests/
+}
+
 help_link_sample="Run Wikilinks-jp linker for sample data."
 link-sample() {
   local sample_dir="data/linkjp-sample-${SAMPLE_DATE}"
@@ -29,7 +34,7 @@ link-sample() {
   mkdir -p $output_dir
 
   for cat in airport city company compound person; do
-    local cat_title=${cat^} # bash version > 4
+    local cat_title=${cat^} # bash version >= 4
     local annotation_json=${sample_dir}/ene_annotation/${cat_title}.json
     local html_dir=${sample_dir}/html/${cat_title}
     python main.py $cat $annotation_json $html_dir $title_pageid_json $output_dir/$cat.json
